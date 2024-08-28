@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            /* tính toán kích thước  */
+        }
+        html{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #main{
+        
+        }
+        #header{
+            height: 46px;
+            background-color: #000;
+          
+        }
+        #nav{
+
+        }
+        #nav > li{  
+            display: inline-block;
+        }
+        #nav,.subnav{
+            list-style-type: none;
+        }
+
+        /* cả css này sẽ ảnh hưởng cả cấp con và */
+        #nav li a{
+            text-decoration: none;
+            /* vì tính chất thẻ a là inline nên ko thay đổi line-height */
+            display: inline-block;    
+            position: relative;;
+        } 
+        #nav > li > a{
+            color: white;
+            text-transform: uppercase ;
+            padding: 0 24px;  
+            line-height:46px ;
+        }
+        #nav > li:hover > a ,.subnav li:hover a  {
+            background-color: #ccc ;
+            color: #000;       
+        }
+        .subnav{
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .subnav li {
+            display: block;
+        }
+        .subnav li a{
+            width: 200px;
+            padding: 8px 16px;
+            line-height: 22px;
+        }
+        /* di vao thẻ li  */
+        #nav .a:hover .subnav {
+            display: block;
+        }
+        #slider{
+            min-height: 500px;
+            background-color: #333;
+        }
+        #content{
+        
+        }
+        #footer{
+
+        }
+    </style>
+ 
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <ul id="nav">
+                <li><a href="">Home</a></li>
+                <li><a href="">Band</a></li>
+                <li><a href="">Tour</a></li>
+                <li><a href="">Conctact</a></li>
+                <li class="a">
+                    <a href="">More</a>
+                    <ul class="subnav">
+                        <li><a href="">Merchasedi</a></li>
+                        <li><a href="">Extrax</a></li>
+                        <li><a href="">Media</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div id="slider">
+
+        </div>
+
+        <div id="content">
+
+        </div>
+
+        <div id="footer">
+            
+        </div>
+    </div>
+</body>
+</html>
